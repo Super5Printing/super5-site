@@ -16,7 +16,7 @@
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:#000326;color:#fff;font-family:'Montserrat',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -151,6 +151,119 @@
     .hero-m .bn b{display:block;font-weight:700;font-size:13px}
     .hero-m .bn span{display:block;font-size:12px;color:#D7DDF0}
   }
+
+  /* ================= SEÇÃO 2 — ESCOLHA O KIT IDEAL ================= */
+  .s2{position:relative;width:100%;aspect-ratio:1536/1045;overflow:hidden;container-type:inline-size;
+    font-family:'Arimo',Arial,sans-serif;
+    background:
+      radial-gradient(ellipse 18% 30% at 8% 12%, rgba(30,90,255,.45), transparent 70%),
+      radial-gradient(ellipse 18% 30% at 92% 12%, rgba(30,90,255,.45), transparent 70%),
+      radial-gradient(ellipse 45% 25% at 50% 55%, rgba(10,50,180,.25), transparent 75%),
+      linear-gradient(180deg,#000a30 0%,#000928 60%,#000a2c 100%)}
+  .s2::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-2%;height:22%;pointer-events:none;
+    background:
+      repeating-linear-gradient(90deg, rgba(60,120,255,.16) 0 1px, transparent 1px 5.2cqw),
+      repeating-linear-gradient(0deg, rgba(60,120,255,.12) 0 1px, transparent 1px 2.6cqw);
+    transform:perspective(40cqw) rotateX(58deg);transform-origin:bottom;
+    -webkit-mask-image:linear-gradient(0deg,#000 20%,transparent);mask-image:linear-gradient(0deg,#000 20%,transparent)}
+  .s2 .p{position:absolute;background-repeat:no-repeat;background-size:100% 100%;z-index:1}
+  .s2 .mulher{background-image:url("img/s2-mulher.webp");left:5.86%;top:.48%;width:17.90%;height:30.24%}
+  .s2 .homem {background-image:url("img/s2-homem.webp"); left:77.47%;top:.48%;width:18.55%;height:30.24%}
+  .s2 h2{position:absolute;left:0;right:0;top:5.55%;padding-left:1.6%;text-align:center;font-weight:700;
+    font-size:4.30cqw;line-height:1.09;z-index:2}
+  .s2 h2 span{display:block}
+  .s2 h2 span:first-child{background:linear-gradient(180deg,#ffffff 20%,#d9dfee 95%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:.035em #e6eaf5}
+  .s2 h2 .az{color:#005DFA;letter-spacing:.035em;-webkit-text-stroke:.035em #005DFA}
+  .s2 .sub{position:absolute;left:0;right:0;top:20.9%;padding-left:2.4%;text-align:center;font-size:1.65cqw;z-index:2}
+  .s2 .sub b{color:#176CE1;font-weight:700}
+  .s2 .risco{position:absolute;left:44%;width:13%;top:25.2%;height:.25cqw;border-radius:9px;
+    background:linear-gradient(90deg,transparent,#2F7BFF,transparent);box-shadow:0 0 1cqw #2F7BFF;z-index:2}
+
+  .s2 .kit{position:absolute;top:30.81%;width:22.98%;height:53.59%;display:block;color:#fff;text-decoration:none;z-index:3;
+    background:linear-gradient(180deg,rgba(6,24,90,.55),rgba(0,9,42,.92) 30%);
+    border:1px solid rgba(60,130,255,.55);border-radius:.9cqw;
+    box-shadow:inset 0 0 2.2cqw rgba(40,110,255,.25),0 0 1.6cqw rgba(20,90,255,.25);
+    transition:transform .18s ease, box-shadow .18s ease}
+  .s2 .kit:hover{transform:translateY(-.35cqw);box-shadow:inset 0 0 2.2cqw rgba(40,110,255,.35),0 0 2.4cqw rgba(40,110,255,.5)}
+  .s2 .kit:focus-visible{outline:.25cqw solid #fff;outline-offset:.25cqw}
+  .s2 .tab{position:absolute;left:50%;top:-.91cqw;transform:translateX(-50%);width:7.55cqw;height:2.6cqw;
+    display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#1463ff,#0048E5);
+    border-radius:.45cqw;font-weight:700;font-size:1.56cqw;box-shadow:0 0 1.2cqw rgba(20,90,255,.6)}
+  .s2 .txt{position:absolute;left:0;right:0;top:2.6cqw;text-align:center}
+  .s2 .txt b,.s2 .txt span{display:block;line-height:2.21cqw;white-space:nowrap}
+  .s2 .txt b{font-weight:700;font-size:1.95cqw;-webkit-text-stroke:.02em currentColor}
+  .s2 .txt .az{color:#1F6BFF}
+  .s2 .txt span{font-weight:500;font-size:1.62cqw;color:#C4CAE4}
+  .s2 .foto{position:absolute;top:9.38cqw;height:19.79cqw}
+  .s2 .foto span{position:absolute;inset:0;background-repeat:no-repeat;background-size:100% 100%}
+  .s2 .preco{position:absolute;left:50%;transform:translateX(-50%);top:29.36cqw;width:14.45cqw;height:6.51cqw;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:linear-gradient(180deg,#0a55ee,#0040C6);border:1px solid rgba(120,170,255,.55);border-radius:.8cqw;
+    box-shadow:0 0 1.6cqw rgba(20,90,255,.45)}
+  .s2 .preco small{font-size:.98cqw;font-weight:500;letter-spacing:.01em}
+  .s2 .preco strong{font-size:4.88cqw;font-weight:700;line-height:.95;letter-spacing:-.01em;-webkit-text-stroke:.025em #fff}
+  .s2 .preco sup{font-size:.5em;vertical-align:.62em;margin-right:.06em}
+
+  .s2 .ben{position:absolute;left:18.9%;width:64.1%;top:86.2%;display:grid;grid-template-columns:repeat(4,1fr);z-index:3}
+  .s2 .ben li{display:flex;align-items:center;justify-content:center;gap:1.1cqw;position:relative}
+  .s2 .ben li+li::before{content:"";position:absolute;left:0;top:10%;bottom:10%;width:1px;background:rgba(80,140,255,.4)}
+  .s2 .ben .ico{width:2.95cqw;height:2.95cqw;color:#2F6BFF}
+  .s2 .ben span{font-weight:500;font-size:1.04cqw;line-height:1.3}
+
+  .s2 .cat{position:absolute;left:33.98%;width:31.9%;top:92.6%;height:5.6%;display:flex;align-items:center;justify-content:center;
+    gap:1.1cqw;color:#fff;text-decoration:none;font-weight:700;font-size:1.56cqw;z-index:3;
+    background:linear-gradient(180deg,#0a3fd6,#00239C);border:1px solid rgba(90,150,255,.7);border-radius:.8cqw;
+    box-shadow:0 0 2cqw rgba(20,80,255,.45);transition:transform .15s ease}
+  .s2 .cat:hover{transform:translateY(-2px)}
+  .s2 .cat:focus-visible{outline:.25cqw solid #fff;outline-offset:.25cqw}
+  .s2 .cat .wa-o{width:2.2cqw;height:2.2cqw}
+
+  .s2m{display:none}
+  @media (max-width:760px){
+    .s2{display:none}
+    .s2m{display:block;padding:30px 14px 26px;font-family:'Arimo',Arial,sans-serif;text-align:center;
+      background:
+        radial-gradient(ellipse 60% 20% at 50% 30%, rgba(30,90,255,.3), transparent 70%),
+        linear-gradient(180deg,#000a30 0%,#000928 60%,#000a2c 100%)}
+    .s2m h2{font-weight:700;font-size:clamp(25px,7.6vw,34px);line-height:1.1;-webkit-text-stroke:.03em currentColor}
+    .s2m h2 span{display:block}
+    .s2m h2 .az{color:#005DFA}
+    .s2m .sub{font-size:15px;line-height:1.4;margin:10px auto 0;max-width:34ch}
+    .s2m .sub b{color:#176CE1}
+    .s2m .gente{display:flex;justify-content:space-between;align-items:flex-end;margin:10px -4px 0;height:clamp(150px,42vw,190px)}
+    .s2m .p{height:100%;aspect-ratio:275/316;background-repeat:no-repeat;background-size:100% 100%}
+    .s2m .homem{aspect-ratio:285/316}
+    .s2m .mulher{background-image:url("img/s2-mulher.webp")}
+    .s2m .homem{background-image:url("img/s2-homem.webp")}
+    .s2m .grade{display:grid;grid-template-columns:1fr 1fr;gap:18px 10px;position:relative;z-index:2}
+    .s2m .kit{position:relative;display:block;color:#fff;text-decoration:none;padding:22px 6px 10px;
+      background:linear-gradient(180deg,rgba(6,24,90,.55),rgba(0,9,42,.92) 30%);
+      border:1px solid rgba(60,130,255,.55);border-radius:10px;box-shadow:inset 0 0 18px rgba(40,110,255,.25)}
+    .s2m .kit:focus-visible{outline:3px solid #fff;outline-offset:3px}
+    .s2m .tab{position:absolute;left:50%;top:-12px;transform:translateX(-50%);padding:4px 14px;
+      background:linear-gradient(180deg,#1463ff,#0048E5);border-radius:6px;font-weight:700;font-size:14px;
+      box-shadow:0 0 12px rgba(20,90,255,.6)}
+    .s2m .txt b,.s2m .txt span{display:block;line-height:1.3}
+    .s2m .txt b{font-weight:700;font-size:15px}
+    .s2m .txt .az{color:#1F6BFF}
+    .s2m .txt span{font-weight:500;font-size:11.5px;color:#C4CAE4}
+    .s2m .foto{display:block;position:relative;margin:8px -6px 8px;aspect-ratio:372/304}
+    .s2m .foto span{position:absolute;inset:0;background-repeat:no-repeat;background-size:100% 100%}
+    .s2m .preco{display:flex;flex-direction:column;align-items:center;margin:0 6px;padding:6px 4px 8px;
+      background:linear-gradient(180deg,#0a55ee,#0040C6);border:1px solid rgba(120,170,255,.55);border-radius:8px}
+    .s2m .preco small{font-size:10px;font-weight:500}
+    .s2m .preco strong{font-size:32px;font-weight:700;line-height:1;-webkit-text-stroke:.02em #fff}
+    .s2m .preco sup{font-size:.5em;vertical-align:.6em}
+    .s2m .ben{display:grid;grid-template-columns:1fr 1fr;gap:16px 10px;margin:26px 0 20px;text-align:left}
+    .s2m .ben li{display:flex;align-items:center;gap:10px}
+    .s2m .ben .ico{width:30px;height:30px;color:#2F6BFF;flex:none}
+    .s2m .ben span{font-weight:500;font-size:12.5px;line-height:1.3}
+    .s2m .cat{display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;text-decoration:none;
+      font-weight:700;font-size:16px;padding:16px 12px;background:linear-gradient(180deg,#0a3fd6,#00239C);
+      border:1px solid rgba(90,150,255,.7);border-radius:12px;box-shadow:0 0 18px rgba(20,80,255,.45)}
+    .s2m .cat .wa-o{width:24px;height:24px}
+  }
+
   @media (prefers-reduced-motion:reduce){.hero .cta{transition:none}.hero .cta:hover{transform:none}}
 </style>
 </head>
@@ -221,6 +334,90 @@
 <li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.4 2.6a1.5 1.5 0 0 1 3 3l-9 9-3.7 1 1-3.7z"/></svg><div><b>Arte Inclusa</b><span>Do seu jeito</span></div></li>
 <li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg><div><b>Atendimento Top</b><span>Suporte humanizado</span></div></li>
   </ul>
+</section>
+
+
+<!-- ================= SEÇÃO 2 — ESCOLHA O KIT IDEAL ================= -->
+<section class="s2" aria-labelledby="s2-titulo">
+  <div class="p mulher" role="img" aria-label="Mulher sorrindo com camiseta personalizada"></div>
+  <div class="p homem" role="img" aria-label="Homem sorrindo com polo e boné personalizados"></div>
+  <h2 id="s2-titulo"><span>ESCOLHA O KIT IDEAL</span><span class="az">PARA O SEU NEGÓCIO</span></h2>
+  <p class="sub">Uniforme profissional + identidade que gera <b>confiança e mais clientes.</b></p>
+  <div class="risco" aria-hidden="true"></div>
+  
+    <a class="kit" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20Kit%201%3A%201%20polo%20%2B%204%20camisetas%20%2B%20500%20business%20card%20%28%24199%29." target="_blank" rel="noopener" style="left:2.80%" aria-label="Kit 1: 1 POLO, 4 CAMISETAS, 500 BUSINESS CARD, por 199 dólares — pedir pelo WhatsApp">
+      <span class="tab">KIT 1</span>
+      <span class="txt"><b>1 POLO</b><b class="az">4 CAMISETAS</b><span>500 BUSINESS CARD</span></span>
+      <span class="foto" role="img" aria-label="Produtos do Kit 1" style="left:-0.977cqw;width:24.219cqw"><span style="background-image:url('img/s2-kit1.webp')"></span></span>
+      <span class="preco"><small>POR APENAS</small><strong><sup>$</sup>199</strong></span>
+    </a>
+    <a class="kit" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20Kit%202%3A%202%20polos%20%2B%204%20camisetas%20%2B%201.000%20business%20card%20%28%24249%29." target="_blank" rel="noopener" style="left:26.69%" aria-label="Kit 2: 2 POLOS, 4 CAMISETAS, 1.000 BUSINESS CARD, por 249 dólares — pedir pelo WhatsApp">
+      <span class="tab">KIT 2</span>
+      <span class="txt"><b>2 POLOS</b><b class="az">4 CAMISETAS</b><span>1.000 BUSINESS CARD</span></span>
+      <span class="foto" role="img" aria-label="Produtos do Kit 2" style="left:-0.781cqw;width:24.349cqw"><span style="background-image:url('img/s2-kit2.webp')"></span></span>
+      <span class="preco"><small>POR APENAS</small><strong><sup>$</sup>249</strong></span>
+    </a>
+    <a class="kit" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20Kit%203%3A%202%20polos%20%2B%208%20camisetas%20%2B%20sem%20cart%C3%A3o%20%28%24239%29." target="_blank" rel="noopener" style="left:50.78%" aria-label="Kit 3: 2 POLOS, 8 CAMISETAS, SEM CARTÃO, por 239 dólares — pedir pelo WhatsApp">
+      <span class="tab">KIT 3</span>
+      <span class="txt"><b>2 POLOS</b><b class="az">8 CAMISETAS</b><span>SEM CARTÃO</span></span>
+      <span class="foto" role="img" aria-label="Produtos do Kit 3" style="left:-0.651cqw;width:24.089cqw"><span style="background-image:url('img/s2-kit3.webp')"></span></span>
+      <span class="preco"><small>POR APENAS</small><strong><sup>$</sup>239</strong></span>
+    </a>
+    <a class="kit" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20Kit%204%3A%202%20polos%20%2B%204%20camisetas%20%2B%202%20bon%C3%A9s%20bordados%20%28%24249%29." target="_blank" rel="noopener" style="left:74.61%" aria-label="Kit 4: 2 POLOS, 4 CAMISETAS, 2 BONÉS BORDADOS, por 249 dólares — pedir pelo WhatsApp">
+      <span class="tab">KIT 4</span>
+      <span class="txt"><b>2 POLOS</b><b class="az">4 CAMISETAS</b><span>2 BONÉS BORDADOS</span></span>
+      <span class="foto" role="img" aria-label="Produtos do Kit 4" style="left:-0.521cqw;width:24.219cqw"><span style="background-image:url('img/s2-kit4.webp')"></span></span>
+      <span class="preco"><small>POR APENAS</small><strong><sup>$</sup>249</strong></span>
+    </a>
+  <ul class="ben">
+<li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>QUALIDADE<br>PREMIUM</span></li>
+<li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h11v10H3z"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/><path d="M1 9h3M.5 12h3"/></svg><span>PRODUÇÃO<br>RÁPIDA</span></li>
+<li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20 15.5 8.5l-2-2L2 18v2z"/><path d="m13.5 6.5 2-2 4 4-2 2"/><path d="M14 20h6M4 4h6M4 4v6"/></svg><span>ARTE DO<br>SEU JEITO</span></li>
+<li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"/><path d="M3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"/><path d="M18 17v1a3 3 0 0 1-3 3h-3"/></svg><span>ATENDIMENTO<br>PERSONALIZADO</span></li>
+  </ul>
+  <a class="cat" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20ver%20o%20cat%C3%A1logo%20de%20kits." target="_blank" rel="noopener"><svg class="wa-o" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3 3z"/><path d="M9 8.5c0 3 2.5 6.5 6 6.5l1-1.5-2-1-1 .8c-1-.5-2-1.5-2.4-2.4l.8-1-1-2z" fill="currentColor" stroke="none"/></svg>VER CATÁLOGO NO WHATSAPP</a>
+</section>
+
+<section class="s2m" aria-label="Escolha o kit ideal para o seu negócio">
+  <h2><span>ESCOLHA O KIT IDEAL</span><span class="az">PARA O SEU NEGÓCIO</span></h2>
+  <p class="sub">Uniforme profissional + identidade que gera <b>confiança e mais clientes.</b></p>
+  <div class="gente">
+    <div class="p mulher" role="img" aria-label="Mulher sorrindo com camiseta personalizada"></div>
+    <div class="p homem" role="img" aria-label="Homem sorrindo com polo e boné personalizados"></div>
+  </div>
+  <div class="grade">
+    <a class="kit" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20Kit%201%3A%201%20polo%20%2B%204%20camisetas%20%2B%20500%20business%20card%20%28%24199%29." target="_blank" rel="noopener" aria-label="Kit 1: 1 POLO, 4 CAMISETAS, 500 BUSINESS CARD, por 199 dólares — pedir pelo WhatsApp">
+      <span class="tab">KIT 1</span>
+      <span class="txt"><b>1 POLO</b><b class="az">4 CAMISETAS</b><span>500 BUSINESS CARD</span></span>
+      <span class="foto" role="img" aria-label="Produtos do Kit 1"><span style="background-image:url('img/s2-kit1.webp')"></span></span>
+      <span class="preco"><small>POR APENAS</small><strong><sup>$</sup>199</strong></span>
+    </a>
+    <a class="kit" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20Kit%202%3A%202%20polos%20%2B%204%20camisetas%20%2B%201.000%20business%20card%20%28%24249%29." target="_blank" rel="noopener" aria-label="Kit 2: 2 POLOS, 4 CAMISETAS, 1.000 BUSINESS CARD, por 249 dólares — pedir pelo WhatsApp">
+      <span class="tab">KIT 2</span>
+      <span class="txt"><b>2 POLOS</b><b class="az">4 CAMISETAS</b><span>1.000 BUSINESS CARD</span></span>
+      <span class="foto" role="img" aria-label="Produtos do Kit 2"><span style="background-image:url('img/s2-kit2.webp')"></span></span>
+      <span class="preco"><small>POR APENAS</small><strong><sup>$</sup>249</strong></span>
+    </a>
+    <a class="kit" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20Kit%203%3A%202%20polos%20%2B%208%20camisetas%20%2B%20sem%20cart%C3%A3o%20%28%24239%29." target="_blank" rel="noopener" aria-label="Kit 3: 2 POLOS, 8 CAMISETAS, SEM CARTÃO, por 239 dólares — pedir pelo WhatsApp">
+      <span class="tab">KIT 3</span>
+      <span class="txt"><b>2 POLOS</b><b class="az">8 CAMISETAS</b><span>SEM CARTÃO</span></span>
+      <span class="foto" role="img" aria-label="Produtos do Kit 3"><span style="background-image:url('img/s2-kit3.webp')"></span></span>
+      <span class="preco"><small>POR APENAS</small><strong><sup>$</sup>239</strong></span>
+    </a>
+    <a class="kit" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20Kit%204%3A%202%20polos%20%2B%204%20camisetas%20%2B%202%20bon%C3%A9s%20bordados%20%28%24249%29." target="_blank" rel="noopener" aria-label="Kit 4: 2 POLOS, 4 CAMISETAS, 2 BONÉS BORDADOS, por 249 dólares — pedir pelo WhatsApp">
+      <span class="tab">KIT 4</span>
+      <span class="txt"><b>2 POLOS</b><b class="az">4 CAMISETAS</b><span>2 BONÉS BORDADOS</span></span>
+      <span class="foto" role="img" aria-label="Produtos do Kit 4"><span style="background-image:url('img/s2-kit4.webp')"></span></span>
+      <span class="preco"><small>POR APENAS</small><strong><sup>$</sup>249</strong></span>
+    </a>
+  </div>
+  <ul class="ben">
+<li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>QUALIDADE<br>PREMIUM</span></li>
+<li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h11v10H3z"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/><path d="M1 9h3M.5 12h3"/></svg><span>PRODUÇÃO<br>RÁPIDA</span></li>
+<li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20 15.5 8.5l-2-2L2 18v2z"/><path d="m13.5 6.5 2-2 4 4-2 2"/><path d="M14 20h6M4 4h6M4 4v6"/></svg><span>ARTE DO<br>SEU JEITO</span></li>
+<li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"/><path d="M3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"/><path d="M18 17v1a3 3 0 0 1-3 3h-3"/></svg><span>ATENDIMENTO<br>PERSONALIZADO</span></li>
+  </ul>
+  <a class="cat" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20ver%20o%20cat%C3%A1logo%20de%20kits." target="_blank" rel="noopener"><svg class="wa-o" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3 3z"/><path d="M9 8.5c0 3 2.5 6.5 6 6.5l1-1.5-2-1-1 .8c-1-.5-2-1.5-2.4-2.4l.8-1-1-2z" fill="currentColor" stroke="none"/></svg>VER CATÁLOGO NO WHATSAPP</a>
 </section>
 
 <!-- próximas seções entram aqui -->
