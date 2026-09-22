@@ -3,350 +3,224 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Super 5 Printing — Uniformes personalizados em Jacksonville, FL</title>
-<meta name="description" content="Uniformes, camisetas e cartões personalizados para empresas de limpeza e construção. Kit Start a partir de $199. Atendimento em português pelo WhatsApp.">
+<title>Super 5 Printing — Kit Start Uniformes a partir de $199</title>
+<meta name="description" content="Kit Start: 2 polos + 4 camisetas + 1000 cartões a partir de $199. Uniformes personalizados para sua empresa. Atendimento direto no WhatsApp.">
 <link rel="canonical" href="https://superfiveprinting.com/">
-
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kit Start Uniformes — a partir de $199">
-<meta property="og:description" content="2 polo + 4 camisetas + 1000 cartões. Fale com a gente no WhatsApp.">
+<meta property="og:description" content="2 polos + 4 camisetas + 1000 cartões. Fale com a gente no WhatsApp.">
 <meta property="og:image" content="https://superfiveprinting.com/img/logo.png">
 <meta property="og:url" content="https://superfiveprinting.com/">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/bg.webp">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:#2b1b52;font-family:'Playfair Display',Georgia,serif;-webkit-font-smoothing:antialiased}
+  body{background:#000326;color:#fff;font-family:'Montserrat',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  ul{list-style:none}
+  .ico{flex:none;color:#2F6BFF}
+  .star{color:#FFC21A}
 
-  .bg    {background-image:url("img/bg.webp")}
-  .glow  {background-image:url("img/glow.webp")}
-  .polo  {background-image:url("img/polo.webp")}
-  .models{background-image:url("img/models.webp")}
-  .cards {background-image:url("img/cards.webp")}
-  .agent {background-image:url("img/agent.webp")}
-  .layer{position:absolute;background-repeat:no-repeat;background-size:100% 100%}
+  /* camadas da cena (percentuais dentro da .scene) */
+  .scene{position:absolute;overflow:hidden}
+  .scene .l{position:absolute;background-repeat:no-repeat;background-size:100% 100%}
+  .scene .polo  {background-image:url("img/h1-polo.webp");  left:12.11%;top:-22.07%;width:68.93%;height:142.04%}
+  .scene .models{background-image:url("img/h1-models.webp");left:-2.22%;top:24.59%;width:76.16%;height:90.55%}
+  .scene .box   {background-image:url("img/h1-box.webp");   left:48.89%;top:22.70%;width:51.11%;height:77.30%}
+  .scene .cards {background-image:url("img/h1-cards.webp"); left:20.56%;top:54.22%;width:35.05%;height:53.27%}
+  .proof{position:absolute;left:53.89%;top:7.57%;width:28.33%;height:15.76%;
+    background:rgba(6,18,64,.82);border:1px solid rgba(47,107,255,.22);border-radius:1.1cqw;
+    padding:1.1cqw 1.4cqw;display:flex;flex-direction:column;justify-content:space-between;
+    box-shadow:0 1cqw 3cqw rgba(0,0,0,.35);backdrop-filter:blur(4px)}
+  .proof .avs{display:flex;align-items:center}
+  .proof .avimg{display:block;width:9cqw;height:2.9cqw;background:url("img/h1-avatars.webp") center/100% 100% no-repeat;border-radius:1.5cqw}
+  .proof .plus{display:flex;align-items:center;justify-content:center;width:2.9cqw;height:2.9cqw;margin-left:-.3cqw;
+    border-radius:50%;background:#1F5BFF;font-weight:800;font-size:.85cqw}
+  .proof p{font-weight:700;font-size:1cqw;line-height:1.2;white-space:nowrap}
+  .proof .stars{display:flex;gap:.45cqw}
+  .proof .star{width:1.35cqw;height:1.35cqw}
 
-  /* ---------- desktop: réplica do PDF (4125 x 2250) ---------- */
-  .stage{position:relative;width:100%;aspect-ratio:4125/2250;overflow:hidden;container-type:inline-size;background:#3b2775}
-  .stage .bg   {left:0;top:-16.36%;width:100%;height:123%}
-  .stage .polo {left:10.15%;top:-20.31%;width:46.75%;height:155.47%}
-  .stage .glow1{left:77.31%;top:18.92%;width:15.65%;height:27.98%}
-  .stage .glow2{left:13.50%;top:55.00%;width:23.08%;height:41.27%}
-  .stage .models{left:3.13%;top:27.25%;width:43.84%;height:84.20%}
-  .stage .cards{left:15.18%;top:52.72%;width:19.75%;height:48.47%}
-  .stage .agent{left:77.66%;top:52.71%;width:30.64%;height:56.17%}
+  /* ================= DESKTOP: réplica da referência (1600 x 853) ================= */
+  .hero{position:relative;width:100%;aspect-ratio:1600/853;overflow:hidden;container-type:inline-size;
+    background:
+      radial-gradient(ellipse 22% 40% at 62% 28%, rgba(40,100,255,.55), transparent 70%),
+      radial-gradient(ellipse 30% 55% at 78% 55%, rgba(20,70,230,.35), transparent 72%),
+      radial-gradient(ellipse 35% 60% at 20% 30%, rgba(10,30,120,.25), transparent 75%),
+      linear-gradient(180deg,#000731 0%,#000326 55%,#010630 100%)}
+  .hero::before,.hero::after{content:"";position:absolute;height:.18cqw;width:34cqw;border-radius:9px;
+    background:linear-gradient(90deg,transparent,rgba(70,140,255,.9),transparent);transform-origin:left center;opacity:.8}
+  .hero::before{left:33%;top:18%;transform:rotate(28deg)}
+  .hero::after {left:28%;top:40%;transform:rotate(-22deg);width:26cqw;opacity:.45}
+  .hero .scene{left:43.75%;top:7.03%;width:56.25%;height:92.97%}
 
-  .stage .txt{position:absolute;color:#fff;white-space:nowrap}
-  .serif{font-family:'Playfair Display',Georgia,serif;line-height:1.333}
-  .anton{font-family:'Anton',Impact,sans-serif;line-height:1.467;font-weight:400}
+  .hero .logo{position:absolute;left:3.4%;top:1.6%;height:11.5%;width:auto;z-index:3}
+  .hero .badge{position:absolute;left:3.88%;top:16.6%;height:4.6%;padding:0 1.35cqw;display:flex;align-items:center;gap:.6cqw;
+    border:1px solid rgba(47,107,255,.55);border-radius:999px;background:rgba(10,30,110,.35);
+    color:#3B78FF;font-weight:800;font-size:1.02cqw;letter-spacing:.02em;z-index:3}
+  .hero .badge .star{width:1.2cqw;height:1.2cqw;color:#3B78FF}
+  .hero h1{position:absolute;left:4.06%;top:23.29%;font-family:'Open Sans',sans-serif;font-weight:800;
+    font-size:7.03cqw;line-height:.889;letter-spacing:-.01em;z-index:3}
+  .hero h1 span{display:block}
+  .hero h1 .red{color:#FE0000}
+  .hero .sub{position:absolute;left:4.13%;top:50.1%;font-size:1.25cqw;font-weight:500;line-height:1.4;z-index:3}
+  .hero .sub b{color:#1F5BFF;font-weight:700}
 
-  .stage .promo  {left:76.55%;top:11.97%;font-size:2.364cqw}
-  .stage .titulo {left:36.95%;top:13.28%;font-size:6.005cqw;font-weight:700}
-  .stage .apartir{left:65.09%;top:26.00%;font-size:2.395cqw;font-style:italic}
-  .stage .precobox{position:absolute;left:77.54%;top:25.23%;width:15.21%;height:12.92%;background:#1741C9}
-  .stage .cifrao {left:78.35%;top:27.61%;font-size:3.149cqw}
-  .stage .preco  {left:80.34%;top:20.29%;font-size:7.484cqw}
-  .stage .l1,.stage .l2,.stage .l3{left:65.78%;transform:translateX(-50%);font-size:4.870cqw}
-  .stage .l1{top:33.84%}
-  .stage .l2{top:46.31%}
-  .stage .l3{top:58.77%}
+  .hero .itens{position:absolute;left:4%;top:59.8%;width:39.4%;height:10.55%;display:grid;
+    grid-template-columns:repeat(3,1fr);gap:.9cqw;z-index:3}
+  .hero .item{display:flex;align-items:center;gap:.7cqw;padding:0 .8cqw;border:1px solid rgba(47,107,255,.45);
+    border-radius:.7cqw;background:rgba(0,6,40,.55)}
+  .hero .item .ico{width:2.9cqw;height:2.9cqw}
+  .hero .item b{display:block;font-weight:700;font-size:.9cqw;letter-spacing:.01em;margin-bottom:.35cqw;white-space:nowrap}
+  .hero .item span{display:block;font-size:.78cqw;line-height:1.35;color:#D7DDF0;white-space:nowrap}
 
-  .stage .cta{position:absolute;left:45.04%;top:75.05%;width:37.69%;height:10.61%;
-    background:#fff;border-radius:999px;display:flex;align-items:center;justify-content:center;
-    gap:1.6cqw;text-decoration:none;color:#3DB784;font-size:3.445cqw;
-    font-family:'Anton',Impact,sans-serif;transition:transform .15s ease, box-shadow .15s ease}
-  .stage .cta:hover{transform:translateY(-2px);box-shadow:0 .8cqw 2cqw rgba(0,0,0,.28)}
-  .stage .cta:focus-visible{outline:.4cqw solid #65CF72;outline-offset:.4cqw}
-  .stage .cta svg{width:5.2cqw;height:5.2cqw;flex:none}
+  .hero .apartir{position:absolute;left:3.5%;top:72.4%;font-size:1.12cqw;font-weight:500;letter-spacing:.02em;z-index:3}
+  .hero .price{position:absolute;left:3.44%;top:75.2%;display:flex;align-items:flex-end;z-index:3;
+    font-family:'Open Sans',sans-serif;font-weight:800;line-height:1}
+  .hero .price .cur{font-size:2.3cqw;margin:0 .9cqw 1.1cqw 0}
+  .hero .price .int{font-size:5.8cqw;position:relative;letter-spacing:-.02em}
+  .hero .price .int::after{content:"";position:absolute;left:-.4cqw;right:-.6cqw;bottom:-.7cqw;height:.55cqw;border-radius:50%;
+    background:linear-gradient(90deg,#076CFA,#0E63DA);transform:rotate(-2.5deg)}
+  .hero .price .dec{font-size:2.2cqw;margin:0 0 1.2cqw .8cqw}
 
-  .mobile{display:none}
+  .hero .cta{position:absolute;left:21.88%;top:76.4%;width:15.63%;height:6.2%;display:flex;align-items:center;justify-content:center;
+    background:#FE0000;color:#fff;text-decoration:none;border-radius:.8cqw;font-weight:800;font-size:1.06cqw;letter-spacing:.02em;
+    box-shadow:0 .6cqw 1.8cqw rgba(254,0,0,.35);transition:transform .15s ease, box-shadow .15s ease;z-index:3}
+  .hero .cta:hover{transform:translateY(-2px);box-shadow:0 .9cqw 2.4cqw rgba(254,0,0,.45)}
+  .hero .cta:focus-visible{outline:.25cqw solid #fff;outline-offset:.25cqw}
+  .hero .wa-line{position:absolute;left:19.9%;top:83.5%;display:flex;align-items:center;gap:.9cqw;font-size:1cqw;font-weight:500;z-index:3}
+  .hero .wa-line .wa{width:1.8cqw;height:1.8cqw}
 
-  /* ---------- mobile ---------- */
+  .hero .beneficios{position:absolute;left:6.56%;top:91.4%;width:54.7%;height:8.8%;display:grid;grid-template-columns:repeat(4,1fr);
+    align-items:center;padding:0 1.6cqw;background:#02113C;border:1px solid rgba(47,107,255,.25);border-bottom:0;
+    border-radius:1.2cqw 1.2cqw 0 0;z-index:4}
+  .hero .bn{display:flex;align-items:center;gap:.9cqw}
+  .hero .bn .ico{width:2.3cqw;height:2.3cqw}
+  .hero .bn b{display:block;font-weight:700;font-size:.9cqw}
+  .hero .bn span{display:block;font-size:.82cqw;color:#D7DDF0}
+
+  /* ================= MOBILE ================= */
+  .hero-m{display:none}
   @media (max-width:760px){
-    .stage{display:none}
-    .mobile{display:block;position:relative;overflow:hidden;padding:34px 20px 0;
-      background-color:#3b2775;background-size:cover;background-position:center}
-    .mobile .promo{color:#fff;font-size:15px;letter-spacing:.02em;margin-bottom:2px}
-    .mobile h1{color:#fff;font-family:'Playfair Display',Georgia,serif;font-weight:700;
-      font-size:clamp(32px,9.5vw,46px);line-height:1.05;margin-bottom:14px}
-    .mobile .precorow{display:flex;align-items:center;gap:10px;margin-bottom:18px}
-    .mobile .apartir{color:#fff;font-style:italic;font-size:18px}
-    .mobile .precobox{background:#1741C9;color:#fff;padding:4px 14px 8px;
-      font-size:clamp(34px,10vw,46px);line-height:1.1}
-    .mobile .precobox span{font-size:.55em;vertical-align:.42em;margin-right:.06em}
-    .mobile ul{list-style:none;margin-bottom:24px}
-    .mobile li{color:#fff;font-family:'Anton',Impact,sans-serif;
-      font-size:clamp(28px,8.6vw,40px);line-height:1.18}
-    .mobile .cta{display:flex;align-items:center;justify-content:center;gap:10px;
-      width:100%;background:#fff;border-radius:999px;padding:16px 18px;text-decoration:none;
-      color:#3DB784;font-family:'Anton',Impact,sans-serif;font-size:clamp(19px,5.6vw,24px);
-      box-shadow:0 6px 22px rgba(0,0,0,.3)}
-    .mobile .cta:focus-visible{outline:3px solid #65CF72;outline-offset:3px}
-    .mobile .cta svg{width:28px;height:28px;flex:none}
-    /* composição completa no celular: fundo + homem de polo + 4 modelos + cartões
-       (a atendente fica de fora, por decisão do Éder) */
-    .mobile .scene{position:relative;aspect-ratio:2041.875/2250;overflow:hidden;margin:20px -20px 0}
-    .mobile .mini{position:absolute;left:0;top:0;width:202.02%;aspect-ratio:4125/2250;
-      transform:translateX(-0.5%)}
-    .mobile .mini .layer{position:absolute;background-repeat:no-repeat;background-size:100% 100%}
-    .mobile .mini .polo  {left:10.15%;top:-20.31%;width:46.75%;height:155.47%}
-    .mobile .mini .models{left:3.13%;top:27.25%;width:43.84%;height:84.20%}
-    .mobile .mini .glow2 {left:13.50%;top:55.00%;width:23.08%;height:41.27%}
-    .mobile .mini .cards {left:15.18%;top:52.72%;width:19.75%;height:48.47%}
+    .hero{display:none}
+    .hero-m{display:block;padding:18px 18px 0;overflow:hidden;
+      background:
+        radial-gradient(ellipse 80% 35% at 70% 62%, rgba(40,100,255,.45), transparent 70%),
+        linear-gradient(180deg,#000731 0%,#000326 60%,#010630 100%)}
+    .hero-m .logo{height:64px;width:auto;display:block;margin-bottom:14px}
+    .hero-m .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(47,107,255,.55);
+      border-radius:999px;background:rgba(10,30,110,.35);color:#3B78FF;font-weight:800;font-size:12px;letter-spacing:.02em}
+    .hero-m .badge .star{width:14px;height:14px;color:#3B78FF}
+    .hero-m h1{font-family:'Open Sans',sans-serif;font-weight:800;font-size:clamp(46px,15vw,72px);line-height:.9;
+      letter-spacing:-.01em;margin:14px 0 12px}
+    .hero-m h1 span{display:block}
+    .hero-m h1 .red{color:#FE0000}
+    .hero-m .sub{font-size:16px;font-weight:500;line-height:1.45;margin-bottom:18px}
+    .hero-m .sub b{color:#1F5BFF;font-weight:700}
+    .hero-m .itens{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}
+    .hero-m .item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:12px 6px;
+      border:1px solid rgba(47,107,255,.45);border-radius:10px;background:rgba(0,6,40,.55)}
+    .hero-m .item .ico{width:30px;height:30px}
+    .hero-m .item b{display:block;font-weight:700;font-size:11.5px;letter-spacing:.01em;margin-bottom:3px}
+    .hero-m .item span{display:block;font-size:10.5px;line-height:1.3;color:#D7DDF0}
+    .hero-m .apartir{font-size:14px;font-weight:500;letter-spacing:.02em}
+    .hero-m .price{display:flex;align-items:flex-end;font-family:'Open Sans',sans-serif;font-weight:800;line-height:1;margin:6px 0 22px}
+    .hero-m .price .cur{font-size:26px;margin:0 8px 10px 0}
+    .hero-m .price .int{font-size:74px;position:relative;letter-spacing:-.02em}
+    .hero-m .price .int::after{content:"";position:absolute;left:-4px;right:-6px;bottom:-8px;height:6px;border-radius:50%;
+      background:linear-gradient(90deg,#076CFA,#0E63DA);transform:rotate(-2.5deg)}
+    .hero-m .price .dec{font-size:26px;margin:0 0 12px 8px}
+    .hero-m .cta{display:flex;align-items:center;justify-content:center;width:100%;padding:17px 16px;background:#FE0000;color:#fff;
+      text-decoration:none;border-radius:12px;font-weight:800;font-size:17px;letter-spacing:.02em;box-shadow:0 8px 22px rgba(254,0,0,.35)}
+    .hero-m .cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+    .hero-m .wa-line{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:500;margin:12px 0 6px}
+    .hero-m .wa-line .wa{width:24px;height:24px}
+    .hero-m .scene{position:relative;width:calc(100% + 36px);margin:0 -18px;aspect-ratio:900/793;container-type:inline-size}
+    .hero-m .scene .proof{left:50.5%;top:2.5%;width:47.5%;height:auto;gap:1.6cqw;border-radius:2.6cqw;padding:2.6cqw 3cqw}
+    .hero-m .scene .proof .avimg{width:23cqw;height:7.3cqw;border-radius:4cqw}
+    .hero-m .scene .proof .plus{width:7.3cqw;height:7.3cqw;margin-left:-.6cqw;font-size:2.4cqw}
+    .hero-m .scene .proof p{font-size:3.1cqw;white-space:normal}
+    .hero-m .scene .proof .star{width:3.6cqw;height:3.6cqw}
+    .hero-m .scene .proof .stars{gap:1cqw}
+    .hero-m .beneficios{display:grid;grid-template-columns:1fr 1fr;gap:14px 10px;margin:0 -18px;padding:18px;
+      background:#02113C;border-top:1px solid rgba(47,107,255,.25)}
+    .hero-m .bn{display:flex;align-items:center;gap:10px}
+    .hero-m .bn .ico{width:28px;height:28px}
+    .hero-m .bn b{display:block;font-weight:700;font-size:13px}
+    .hero-m .bn span{display:block;font-size:12px;color:#D7DDF0}
   }
-
-  /* ================= SEÇÃO 2 — PORQUE COMPRAR ================= */
-  .s2{position:relative;width:100%;aspect-ratio:4125/2250;overflow:hidden;
-      container-type:inline-size;background:#8d1fa8}
-  .s2 .bg2{position:absolute;left:0;top:-11.74%;width:99.40%;height:122.23%;
-      background-image:url("img/s2-bg.webp");background-size:100% 100%;background-repeat:no-repeat}
-  .s2 .pill{position:absolute;left:24.52%;top:5.73%;width:49.24%;height:8.53%;
-      background:#fff;border-radius:999px;display:flex;align-items:center;justify-content:center}
-  .s2 .pill h2{font-family:'Anton',Impact,sans-serif;font-weight:400;color:#1C1E29;
-      font-size:2.771cqw;line-height:1.467;white-space:nowrap}
-  .s2 ul{list-style:none;margin:0;padding:0}
-  .s2 li{position:absolute;left:8.63%;padding-left:2.77cqw;color:#fff;white-space:nowrap;
-      font-family:'Anton',Impact,sans-serif;font-weight:400;font-size:3.500cqw;line-height:1.466}
-  .s2 li::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
-      width:1.31cqw;height:1.31cqw;border-radius:50%;background:#fff}
-  .s2 li:nth-child(1){top:17.67%}
-  .s2 li:nth-child(2){top:26.64%}
-  .s2 li:nth-child(3){top:35.60%}
-  .s2 li:nth-child(4){top:44.56%}
-  .s2 li:nth-child(5){top:53.53%}
-  .s2 li:nth-child(6){top:62.49%}
-  .s2 li:nth-child(7){top:71.46%}
-  .s2 li:nth-child(8){top:80.42%}
-
-  .s2m{display:none}
-  @media (max-width:760px){
-    .s2{display:none}
-    .s2m{display:block;padding:30px 18px 34px;background-color:#8d1fa8;
-      background-image:url("img/s2-bg.webp");background-size:cover;background-position:center}
-    .s2m .pill{background:#fff;border-radius:999px;padding:10px 18px;margin:0 auto 22px;
-      width:fit-content;max-width:100%}
-    .s2m .pill h2{font-family:'Anton',Impact,sans-serif;font-weight:400;color:#1C1E29;
-      font-size:clamp(16px,4.6vw,22px);line-height:1.25;text-align:center}
-    .s2m ul{list-style:none;margin:0;padding:0}
-    .s2m li{position:relative;padding-left:20px;margin-bottom:14px;color:#fff;
-      font-family:'Anton',Impact,sans-serif;font-size:clamp(19px,5.4vw,26px);line-height:1.2}
-    .s2m li::before{content:"";position:absolute;left:0;top:.55em;
-      width:8px;height:8px;border-radius:50%;background:#fff}
-  }
-
-  /* ================= SEÇÃO 3 — CATÁLOGO ================= */
-  .s3{position:relative;width:100%;aspect-ratio:4125/2250;overflow:hidden;
-      container-type:inline-size;background:#0b2a63}
-  .s3 .bg3{position:absolute;left:0;top:-11.74%;width:99.40%;height:122.23%;
-      background-image:url("img/s3-bg.webp");background-size:100% 100%;background-repeat:no-repeat}
-  .s3 .pill{position:absolute;background:#fff;border-radius:999px;
-      display:flex;align-items:center;justify-content:center;gap:1cqw}
-  .s3 .pill-top{left:31.10%;top:5.73%;width:34.78%;height:8.53%}
-  .s3 .pill-top h2{font-family:'Anton',Impact,sans-serif;font-weight:400;color:#1C1E29;
-      font-size:2.771cqw;line-height:1.467;white-space:nowrap}
-  .s3 .pill-top svg{width:2.89cqw;height:2.89cqw;flex:none;fill:#1C1E29}
-  .s3 .pill-kit{top:21.19%;width:27.56%;height:8.53%}
-  .s3 .pill-kit h3{font-family:'Anton',Impact,sans-serif;font-weight:400;color:#1C1E29;
-      font-size:2.771cqw;line-height:1.467;white-space:nowrap}
-  .s3 .k1{left:4.56%} .s3 .k2{left:35.91%} .s3 .k3{left:67.26%}
-
-  .s3 .slot{position:absolute;top:31.54%;width:25.34%;height:62.07%;
-      background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.28);
-      display:flex;align-items:center;justify-content:center;overflow:hidden}
-  .s3 .slot span{font-family:'Anton',Impact,sans-serif;font-size:2.2cqw;
-      color:rgba(255,255,255,.55);letter-spacing:.04em}
-  .s3 .slot img{width:100%;height:100%;object-fit:cover;display:block}
-  .s3 .s-1{left:5.45%} .s3 .s-2{left:37.03%} .s3 .s-3{left:68.60%}
-
-  .s3 .arrow{position:absolute;top:51.02%;width:7.08%;height:12.98%;border-radius:50%;
-      background:#fff;display:flex;align-items:center;justify-content:center}
-  .s3 .arrow svg{width:3.2cqw;height:3.2cqw;fill:none;stroke:#0E2A5A;stroke-width:3;
-      stroke-linecap:round;stroke-linejoin:round}
-  .s3 .a-prev{left:1.80%}
-  .s3 .a-next{left:90.40%}
-
-  .s3 .cta3{position:absolute;left:26.39%;top:86.24%;width:43.91%;height:10.61%;
-      background:#fff;border-radius:999px;display:flex;align-items:center;justify-content:center;
-      gap:1.6cqw;text-decoration:none;font-family:'Anton',Impact,sans-serif;font-size:3.445cqw;
-      box-shadow:0 1.2cqw 3cqw rgba(0,0,0,.35);transition:transform .15s ease}
-  .s3 .cta3 b{font-weight:400;background:linear-gradient(90deg,#1AA3A8,#3DB784);
-      -webkit-background-clip:text;background-clip:text;color:transparent}
-  .s3 .cta3:hover{transform:translateY(-2px)}
-  .s3 .cta3:focus-visible{outline:.4cqw solid #65CF72;outline-offset:.4cqw}
-  .s3 .cta3 svg{width:5.2cqw;height:5.2cqw;flex:none}
-
-  .s3m{display:none}
-  @media (max-width:760px){
-    .s3{display:none}
-    .s3m{display:block;padding:28px 0 34px;background-color:#0b2a63;
-      background-image:url("img/s3-bg.webp");background-size:cover;background-position:center}
-    .s3m .pill-top{background:#fff;border-radius:999px;padding:10px 18px;margin:0 auto 20px;
-      width:fit-content;display:flex;align-items:center;gap:8px}
-    .s3m .pill-top h2{font-family:'Anton',Impact,sans-serif;font-weight:400;color:#1C1E29;
-      font-size:clamp(17px,4.8vw,22px)}
-    .s3m .pill-top svg{width:20px;height:20px;fill:#1C1E29;flex:none}
-    .s3m .track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
-      padding:0 18px 12px;-webkit-overflow-scrolling:touch}
-    .s3m .card{flex:0 0 78%;scroll-snap-align:center}
-    .s3m .pill-kit{background:#fff;border-radius:999px;padding:8px 14px;margin-bottom:10px;
-      text-align:center}
-    .s3m .pill-kit h3{font-family:'Anton',Impact,sans-serif;font-weight:400;color:#1C1E29;
-      font-size:clamp(16px,4.4vw,20px)}
-    .s3m .slot{aspect-ratio:1/2.1;background:rgba(255,255,255,.22);
-      border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center}
-    .s3m .slot span{font-family:'Anton',Impact,sans-serif;color:rgba(255,255,255,.55);
-      font-size:18px}
-    .s3m .cta3{display:flex;align-items:center;justify-content:center;gap:10px;
-      margin:22px 18px 0;background:#fff;border-radius:999px;padding:16px 18px;
-      text-decoration:none;font-family:'Anton',Impact,sans-serif;
-      font-size:clamp(18px,5.2vw,23px);box-shadow:0 6px 22px rgba(0,0,0,.3)}
-    .s3m .cta3 b{font-weight:400;background:linear-gradient(90deg,#1AA3A8,#3DB784);
-      -webkit-background-clip:text;background-clip:text;color:transparent}
-    .s3m .cta3 svg{width:28px;height:28px;flex:none}
-  }
-
-  @media (prefers-reduced-motion:reduce){
-    .stage .cta{transition:none}
-    .stage .cta:hover{transform:none}
-  }
+  @media (prefers-reduced-motion:reduce){.hero .cta{transition:none}.hero .cta:hover{transform:none}}
 </style>
 </head>
 <body>
 
-<!-- ================= SEÇÃO 1 — HERO KIT START ================= -->
-<section class="stage" aria-label="Promoção Kit Start Uniformes">
-  <div class="layer bg" role="presentation"></div>
-  <div class="layer polo" role="img" aria-label="Homem vestindo camisa polo azul-marinho com logo bordado"></div>
-  <div class="layer glow glow1" role="presentation"></div>
-  <div class="layer models" role="img" aria-label="Quatro modelos vestindo camisetas pretas personalizadas da Super 5 Printing"></div>
-  <div class="layer glow glow2" role="presentation"></div>
-  <div class="layer cards" role="img" aria-label="Mão segurando cartões de visita impressos"></div>
-  <div class="layer agent" role="img" aria-label="Atendente da Super 5 Printing pronta para atender pelo WhatsApp"></div>
-
-  <div class="txt serif promo">PROMOÇÃO</div>
-  <h1 class="txt serif titulo">kit Start -Uniformes</h1>
-  <div class="txt serif apartir">a partir de</div>
-  <div class="precobox"></div>
-  <div class="txt serif cifrao">$</div>
-  <div class="txt serif preco">199</div>
-  <div class="txt anton l1">2 polo +</div>
-  <div class="txt anton l2">4 camisetas +</div>
-  <div class="txt anton l3">1000 cartões</div>
-
-  <a class="cta" href="https://wa.me/19047490204?text=Ol%C3%A1!%20Quero%20o%20Kit%20Start%20de%20uniformes." target="_blank" rel="noopener">
-    QUERO MEU KIT AGORA
-    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="#65CF72"/><path fill="#fff" d="M22.3 9.6A8.9 8.9 0 0 0 8.2 20.3L7 24.8l4.6-1.2a8.9 8.9 0 0 0 4.3 1.1h.1a8.9 8.9 0 0 0 6.3-15.1zm-6.3 13.7a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.7.7.7-2.7-.2-.3a7.4 7.4 0 1 1 6.3 3.5zm4.1-5.5c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.5.1-.1.2-.6.8-.7.9-.1.1-.3.2-.5 0a6 6 0 0 1-1.8-1.1 6.7 6.7 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.4a.4.4 0 0 0 0-.4c0-.1-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2 4.7 4.7 0 0 0 1 2.5 10.7 10.7 0 0 0 4.1 3.6c1.4.6 2 .6 2.7.5a2.3 2.3 0 0 0 1.5-1.1 1.9 1.9 0 0 0 .1-1c0-.2-.2-.2-.4-.3z"/></svg>
-  </a>
-</section>
-
-<section class="mobile bg" aria-label="Promoção Kit Start Uniformes">
-  <div class="promo serif">PROMOÇÃO</div>
-  <h1>kit Start<br>-Uniformes</h1>
-  <div class="precorow">
-    <div class="apartir serif">a partir de</div>
-    <div class="precobox serif"><span>$</span>199</div>
-  </div>
-  <ul>
-    <li>2 polo +</li>
-    <li>4 camisetas +</li>
-    <li>1000 cartões</li>
-  </ul>
-  <a class="cta" href="https://wa.me/19047490204?text=Ol%C3%A1!%20Quero%20o%20Kit%20Start%20de%20uniformes." target="_blank" rel="noopener">
-    QUERO MEU KIT AGORA
-    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="#65CF72"/><path fill="#fff" d="M22.3 9.6A8.9 8.9 0 0 0 8.2 20.3L7 24.8l4.6-1.2a8.9 8.9 0 0 0 4.3 1.1h.1a8.9 8.9 0 0 0 6.3-15.1zm-6.3 13.7a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.7.7.7-2.7-.2-.3a7.4 7.4 0 1 1 6.3 3.5zm4.1-5.5c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.5.1-.1.2-.6.8-.7.9-.1.1-.3.2-.5 0a6 6 0 0 1-1.8-1.1 6.7 6.7 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.4a.4.4 0 0 0 0-.4c0-.1-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2 4.7 4.7 0 0 0 1 2.5 10.7 10.7 0 0 0 4.1 3.6c1.4.6 2 .6 2.7.5a2.3 2.3 0 0 0 1.5-1.1 1.9 1.9 0 0 0 .1-1c0-.2-.2-.2-.4-.3z"/></svg>
-  </a>
-  <div class="scene" role="img" aria-label="Equipe vestindo camisetas e polo personalizados da Super 5 Printing, com cartões de visita em destaque">
-    <div class="mini">
-      <div class="layer polo"></div>
-      <div class="layer models"></div>
-      <div class="layer glow glow2"></div>
-      <div class="layer cards"></div>
+<!-- ================= SEÇÃO 1 — HERO KIT START (layout novo) ================= -->
+<section class="hero" aria-labelledby="h1-titulo">
+  <img class="logo" src="img/logo.png" alt="Super 5 Printing">
+  <div class="scene">
+    <div class="l polo" role="img" aria-label="Homem vestindo polo azul-marinho personalizada da Super 5 Printing"></div>
+    <div class="l models" role="img" aria-label="Equipe vestindo camisetas pretas personalizadas"></div>
+    <div class="l box" role="img" aria-label="Embalagem e caixa personalizadas da Super 5 Printing"></div>
+    <div class="l cards" role="img" aria-label="Mão segurando cartões de visita impressos"></div>
+    <div class="proof">
+      <div class="avs"><span class="avimg" role="img" aria-label="Clientes da Super 5 Printing"></span><span class="plus">+50</span></div>
+      <p>Mais de 500 kits vendidos</p>
+      <div class="stars" aria-label="Avaliação 5 estrelas"><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg></div>
     </div>
   </div>
-</section>
-
-<!-- ================= SEÇÃO 2 — PORQUE COMPRAR ================= -->
-<section class="s2" aria-labelledby="s2-titulo">
-  <div class="bg2" role="presentation"></div>
-  <div class="pill"><h2 id="s2-titulo">💥 Porque comprar na Super 5 Printing</h2></div>
-  <ul>
-    <li>+200 kits vendidos em toda América 🇺🇸</li>
-    <li>+40 avaliações 5⭐ reais no Google</li>
-    <li>Clientes reais. Telefones reais. Você pode ligar</li>
-    <li>Centenas de serviços publicados no Instagram</li>
-    <li>Empresa e endereço com selo de verificação</li>
-    <li>Você não precisa confiar. Pode conferir.</li>
-    <li>Transparência total do início ao fim</li>
-    <li>Nossa prova está nos nossos clientes</li>
+  <div class="badge"><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg>PROMOÇÃO ESPECIAL</div>
+  <h1 id="h1-titulo"><span>KIT START</span><span class="red">UNIFORMES</span></h1>
+  <p class="sub">Profissionalismo que veste<br>sua equipe e <b>impulsiona</b> seu negócio!</p>
+  <ul class="itens">
+<li class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.4 3.5 16 2a4 4 0 0 1-8 0L3.6 3.5a2 2 0 0 0-1.3 2.2l.6 3.5a1 1 0 0 0 1 .8H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.1a1 1 0 0 0 1-.8l.6-3.5a2 2 0 0 0-1.3-2.2z"/><path d="M9.2 2.6 12 6.2l2.8-3.6M12 6.2v4.3"/><circle cx="12" cy="8" r=".3"/></svg><div><b>2 POLOS</b><span>Para visitas<br>e orçamentos</span></div></li>
+<li class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.4 3.5 16 2a4 4 0 0 1-8 0L3.6 3.5a2 2 0 0 0-1.3 2.2l.6 3.5a1 1 0 0 0 1 .8H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.1a1 1 0 0 0 1-.8l.6-3.5a2 2 0 0 0-1.3-2.2z"/></svg><div><b>4 CAMISETAS</b><span>Para sua equipe<br>trabalhar</span></div></li>
+<li class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="6" width="15" height="10" rx="1.5"/><path d="M6 20h14a2 2 0 0 0 2-2V9"/><path d="M5 10h4M5 13h7"/></svg><div><b>1000 CARTÕES</b><span>Para divulgar<br>sua empresa</span></div></li>
+  </ul>
+  <div class="apartir">A PARTIR DE</div>
+  <div class="price" aria-label="199 dólares"><span class="cur">$</span><span class="int">199</span><span class="dec">,00</span></div>
+  <a class="cta" href="https://wa.me/19047490204?text=Ol%C3%A1!%20Quero%20o%20Kit%20Start%20de%20uniformes." target="_blank" rel="noopener">QUERO MEU KIT AGORA</a>
+  <div class="wa-line"><svg class="wa" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="#25D366"/><path fill="#fff" d="M22.3 9.6A8.9 8.9 0 0 0 8.2 20.3L7 24.8l4.6-1.2a8.9 8.9 0 0 0 4.3 1.1h.1a8.9 8.9 0 0 0 6.3-15.1zm-6.3 13.7a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.7.7.7-2.7-.2-.3a7.4 7.4 0 1 1 6.3 3.5zm4.1-5.5c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.5.1-.1.2-.6.8-.7.9-.1.1-.3.2-.5 0a6 6 0 0 1-1.8-1.1 6.7 6.7 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.4a.4.4 0 0 0 0-.4c0-.1-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2 4.7 4.7 0 0 0 1 2.5 10.7 10.7 0 0 0 4.1 3.6c1.4.6 2 .6 2.7.5a2.3 2.3 0 0 0 1.5-1.1 1.9 1.9 0 0 0 .1-1c0-.2-.2-.2-.4-.3z"/></svg>Atendimento direto no WhatsApp</div>
+  <ul class="beneficios">
+<li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="6"/><circle cx="12" cy="8.5" r="3"/><path d="M15.5 13.4 17 22l-5-3-5 3 1.5-8.6"/></svg><div><b>Alta Qualidade</b><span>Materiais premium</span></div></li>
+<li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>Entrega Rápida</b><span>No prazo combinado</span></div></li>
+<li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.4 2.6a1.5 1.5 0 0 1 3 3l-9 9-3.7 1 1-3.7z"/></svg><div><b>Arte Inclusa</b><span>Do seu jeito</span></div></li>
+<li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg><div><b>Atendimento Top</b><span>Suporte humanizado</span></div></li>
   </ul>
 </section>
 
-<section class="s2m" aria-label="Porque comprar na Super 5 Printing">
-  <div class="pill"><h2>💥 Porque comprar na Super 5 Printing</h2></div>
-  <ul>
-    <li>+200 kits vendidos em toda América 🇺🇸</li>
-    <li>+40 avaliações 5⭐ reais no Google</li>
-    <li>Clientes reais. Telefones reais. Você pode ligar</li>
-    <li>Centenas de serviços publicados no Instagram</li>
-    <li>Empresa e endereço com selo de verificação</li>
-    <li>Você não precisa confiar. Pode conferir.</li>
-    <li>Transparência total do início ao fim</li>
-    <li>Nossa prova está nos nossos clientes</li>
+<section class="hero-m" aria-label="Kit Start Uniformes">
+  <img class="logo" src="img/logo.png" alt="Super 5 Printing">
+  <div class="badge"><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg>PROMOÇÃO ESPECIAL</div>
+  <h1><span>KIT START</span><span class="red">UNIFORMES</span></h1>
+  <p class="sub">Profissionalismo que veste sua equipe e <b>impulsiona</b> seu negócio!</p>
+  <ul class="itens">
+<li class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.4 3.5 16 2a4 4 0 0 1-8 0L3.6 3.5a2 2 0 0 0-1.3 2.2l.6 3.5a1 1 0 0 0 1 .8H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.1a1 1 0 0 0 1-.8l.6-3.5a2 2 0 0 0-1.3-2.2z"/><path d="M9.2 2.6 12 6.2l2.8-3.6M12 6.2v4.3"/><circle cx="12" cy="8" r=".3"/></svg><div><b>2 POLOS</b><span>Para visitas<br>e orçamentos</span></div></li>
+<li class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.4 3.5 16 2a4 4 0 0 1-8 0L3.6 3.5a2 2 0 0 0-1.3 2.2l.6 3.5a1 1 0 0 0 1 .8H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.1a1 1 0 0 0 1-.8l.6-3.5a2 2 0 0 0-1.3-2.2z"/></svg><div><b>4 CAMISETAS</b><span>Para sua equipe<br>trabalhar</span></div></li>
+<li class="item"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="6" width="15" height="10" rx="1.5"/><path d="M6 20h14a2 2 0 0 0 2-2V9"/><path d="M5 10h4M5 13h7"/></svg><div><b>1000 CARTÕES</b><span>Para divulgar<br>sua empresa</span></div></li>
   </ul>
-</section>
-
-<!-- ================= SEÇÃO 3 — CATÁLOGO =================
-     Nomes provisórios. No PDF do Éder são:
-     kit#3 house cleaning / kit#4 Construction / kit#5 Digital
-     As artes dos kits entram no lugar do <span> dentro de cada .slot -->
-<section class="s3" aria-labelledby="s3-titulo">
-  <div class="bg3" role="presentation"></div>
-
-  <div class="pill pill-top"><h2 id="s3-titulo">Acesse nosso catálogo</h2><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 8h12l-1 12H7L6 8zm3 0V6a3 3 0 0 1 6 0v2" fill="none" stroke="#1C1E29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-
-  <div class="pill pill-kit k1"><h3>Kit 1</h3></div>
-  <div class="pill pill-kit k2"><h3>Kit 2</h3></div>
-  <div class="pill pill-kit k3"><h3>Kit 3</h3></div>
-
-  <div class="slot s-1"><span>ARTE DO KIT 1</span></div>
-  <div class="slot s-2"><span>ARTE DO KIT 2</span></div>
-  <div class="slot s-3"><span>ARTE DO KIT 3</span></div>
-
-  <div class="arrow a-prev" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></div>
-  <div class="arrow a-next" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></div>
-
-  <a class="cta3" href="https://wa.me/19047490204?text=Ol%C3%A1!%20Quero%20ver%20o%20cat%C3%A1logo%20de%20kits." target="_blank" rel="noopener">
-    <b>Acesse o catálogo aqui</b>
-    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="#65CF72"/><path fill="#fff" d="M22.3 9.6A8.9 8.9 0 0 0 8.2 20.3L7 24.8l4.6-1.2a8.9 8.9 0 0 0 4.3 1.1h.1a8.9 8.9 0 0 0 6.3-15.1zm-6.3 13.7a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.7.7.7-2.7-.2-.3a7.4 7.4 0 1 1 6.3 3.5zm4.1-5.5c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.5.1-.1.2-.6.8-.7.9-.1.1-.3.2-.5 0a6 6 0 0 1-1.8-1.1 6.7 6.7 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.4a.4.4 0 0 0 0-.4c0-.1-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2 4.7 4.7 0 0 0 1 2.5 10.7 10.7 0 0 0 4.1 3.6c1.4.6 2 .6 2.7.5a2.3 2.3 0 0 0 1.5-1.1 1.9 1.9 0 0 0 .1-1c0-.2-.2-.2-.4-.3z"/></svg>
-  </a>
-</section>
-
-<section class="s3m" aria-label="Acesse nosso catálogo">
-  <div class="pill-top"><h2>Acesse nosso catálogo</h2><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 8h12l-1 12H7L6 8zm3 0V6a3 3 0 0 1 6 0v2" fill="none" stroke="#1C1E29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-  <div class="track">
-    <div class="card">
-      <div class="pill-kit"><h3>Kit 1</h3></div>
-      <div class="slot"><span>ARTE DO KIT 1</span></div>
-    </div>
-    <div class="card">
-      <div class="pill-kit"><h3>Kit 2</h3></div>
-      <div class="slot"><span>ARTE DO KIT 2</span></div>
-    </div>
-    <div class="card">
-      <div class="pill-kit"><h3>Kit 3</h3></div>
-      <div class="slot"><span>ARTE DO KIT 3</span></div>
+  <div class="apartir">A PARTIR DE</div>
+  <div class="price" aria-label="199 dólares"><span class="cur">$</span><span class="int">199</span><span class="dec">,00</span></div>
+  <a class="cta" href="https://wa.me/19047490204?text=Ol%C3%A1!%20Quero%20o%20Kit%20Start%20de%20uniformes." target="_blank" rel="noopener">QUERO MEU KIT AGORA</a>
+  <div class="wa-line"><svg class="wa" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="#25D366"/><path fill="#fff" d="M22.3 9.6A8.9 8.9 0 0 0 8.2 20.3L7 24.8l4.6-1.2a8.9 8.9 0 0 0 4.3 1.1h.1a8.9 8.9 0 0 0 6.3-15.1zm-6.3 13.7a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.7.7.7-2.7-.2-.3a7.4 7.4 0 1 1 6.3 3.5zm4.1-5.5c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.5.1-.1.2-.6.8-.7.9-.1.1-.3.2-.5 0a6 6 0 0 1-1.8-1.1 6.7 6.7 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.4a.4.4 0 0 0 0-.4c0-.1-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2 4.7 4.7 0 0 0 1 2.5 10.7 10.7 0 0 0 4.1 3.6c1.4.6 2 .6 2.7.5a2.3 2.3 0 0 0 1.5-1.1 1.9 1.9 0 0 0 .1-1c0-.2-.2-.2-.4-.3z"/></svg>Atendimento direto no WhatsApp</div>
+  <div class="scene">
+    <div class="l polo" role="img" aria-label="Homem vestindo polo azul-marinho personalizada da Super 5 Printing"></div>
+    <div class="l models" role="img" aria-label="Equipe vestindo camisetas pretas personalizadas"></div>
+    <div class="l box" role="img" aria-label="Embalagem e caixa personalizadas da Super 5 Printing"></div>
+    <div class="l cards" role="img" aria-label="Mão segurando cartões de visita impressos"></div>
+    <div class="proof">
+      <div class="avs"><span class="avimg" role="img" aria-label="Clientes da Super 5 Printing"></span><span class="plus">+50</span></div>
+      <p>Mais de 500 kits vendidos</p>
+      <div class="stars" aria-label="Avaliação 5 estrelas"><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg><svg class="star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"/></svg></div>
     </div>
   </div>
-  <a class="cta3" href="https://wa.me/19047490204?text=Ol%C3%A1!%20Quero%20ver%20o%20cat%C3%A1logo%20de%20kits." target="_blank" rel="noopener">
-    <b>Acesse o catálogo aqui</b>
-    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="#65CF72"/><path fill="#fff" d="M22.3 9.6A8.9 8.9 0 0 0 8.2 20.3L7 24.8l4.6-1.2a8.9 8.9 0 0 0 4.3 1.1h.1a8.9 8.9 0 0 0 6.3-15.1zm-6.3 13.7a7.4 7.4 0 0 1-3.8-1l-.3-.2-2.7.7.7-2.7-.2-.3a7.4 7.4 0 1 1 6.3 3.5zm4.1-5.5c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.5.1-.1.2-.6.8-.7.9-.1.1-.3.2-.5 0a6 6 0 0 1-1.8-1.1 6.7 6.7 0 0 1-1.2-1.6c-.1-.2 0-.4.1-.5l.4-.4c.1-.2.2-.3.2-.4a.4.4 0 0 0 0-.4c0-.1-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2 4.7 4.7 0 0 0 1 2.5 10.7 10.7 0 0 0 4.1 3.6c1.4.6 2 .6 2.7.5a2.3 2.3 0 0 0 1.5-1.1 1.9 1.9 0 0 0 .1-1c0-.2-.2-.2-.4-.3z"/></svg>
-  </a>
+  <ul class="beneficios">
+<li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="6"/><circle cx="12" cy="8.5" r="3"/><path d="M15.5 13.4 17 22l-5-3-5 3 1.5-8.6"/></svg><div><b>Alta Qualidade</b><span>Materiais premium</span></div></li>
+<li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b>Entrega Rápida</b><span>No prazo combinado</span></div></li>
+<li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.4 2.6a1.5 1.5 0 0 1 3 3l-9 9-3.7 1 1-3.7z"/></svg><div><b>Arte Inclusa</b><span>Do seu jeito</span></div></li>
+<li class="bn"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg><div><b>Atendimento Top</b><span>Suporte humanizado</span></div></li>
+  </ul>
 </section>
 
 <!-- próximas seções entram aqui -->
