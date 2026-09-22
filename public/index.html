@@ -264,6 +264,99 @@
     .s2m .cat .wa-o{width:24px;height:24px}
   }
 
+
+  /* ================= SEÇÃO 3 — EXCLUSIVO PARA CONSTRUCTION ================= */
+  .s3{position:relative;width:100%;aspect-ratio:1536/1024;overflow:hidden;container-type:inline-size;
+    font-family:'Arimo',Arial,sans-serif;color:#fff;
+    background:
+      radial-gradient(ellipse 30% 45% at 72% 30%, rgba(20,70,190,.35), transparent 70%),
+      radial-gradient(ellipse 40% 40% at 12% 55%, rgba(10,40,140,.20), transparent 75%),
+      linear-gradient(180deg,#02030f 0%,#010010 55%,#02030f 100%)}
+  .s3 .dir{position:absolute;left:50.46%;top:0;width:49.54%;height:100%;
+    background:url("img/s3-direita.webp") center/100% 100% no-repeat;z-index:1}
+
+  .s3 .tag{position:absolute;left:1.82%;top:2.44%;width:22.14%;height:7.32%;display:flex;align-items:center;gap:1.3cqw;
+    padding-left:.98cqw;border:1px solid rgba(60,130,255,.7);border-radius:.8cqw;background:rgba(2,6,28,.75);
+    box-shadow:0 0 1.4cqw rgba(30,100,255,.45),inset 0 0 1.4cqw rgba(30,100,255,.25);z-index:3}
+  .s3 .tag .casa{width:3.39cqw;height:3.39cqw;color:#2F7BFF;flex:none}
+  .s3 .tag small{display:block;font-size:1.04cqw;font-weight:700;letter-spacing:.01em;line-height:1.2}
+  .s3 .tag b{display:block;font-size:1.84cqw;font-weight:700;line-height:1.2}
+
+  .s3 h2{position:absolute;left:2.28%;top:11.52%;font-size:7.03cqw;font-weight:700;line-height:1.05;
+    letter-spacing:-.005em;z-index:3}
+  .s3 h2 .vm{color:#FF3131}
+  .s3 .sub{position:absolute;left:2.28%;top:22.90%;font-size:1.58cqw;font-weight:700;line-height:1.85;z-index:3}
+  .s3 .sub span{display:block;white-space:nowrap}
+  .s3 .sub .vm{color:#E8383C}
+  .s3 .sub .az{color:#2166DB}
+
+  .s3 .bl{position:absolute;left:1.30%;width:25.07%;height:17.58%;z-index:3;
+    background:linear-gradient(180deg,rgba(8,20,70,.55),rgba(1,3,20,.9));
+    border:1px solid rgba(60,130,255,.45);border-radius:1cqw;
+    box-shadow:inset 0 0 2cqw rgba(30,100,255,.2),0 0 1.4cqw rgba(20,80,220,.2)}
+  .s3 .b1{top:33.01%} .s3 .b2{top:51.46%} .s3 .b3{top:69.82%}
+  .s3 .bl .ico{position:absolute;left:1.63cqw;top:1.43cqw;width:4.88cqw;height:4.88cqw;color:#E8383C}
+  .s3 .bl .tx{position:absolute;left:9.11cqw;right:.6cqw}
+  .s3 .bl h3{position:absolute;top:1.38cqw;font-size:1.63cqw;font-weight:700;line-height:1.2;white-space:nowrap}
+  .s3 .bl .vm{position:absolute;top:3.60cqw;color:#E8383C;font-size:1.20cqw;font-weight:700;line-height:1.46}
+  .s3 .bl .cz{position:absolute;top:7.43cqw;color:#C5C6D4;font-size:1.07cqw;font-weight:400;line-height:1.45}
+  .s3 .bl span{display:block;white-space:nowrap}
+
+  .s3 .foto{position:absolute;background-repeat:no-repeat;background-size:100% 100%;z-index:4}
+  .s3 .placa   {background-image:url("img/s3-placa.webp");   left:25.39%;top:33.40%;width:17.71%;height:16.99%}
+  .s3 .van     {background-image:url("img/s3-van.webp");     left:20.70%;top:50.98%;width:29.95%;height:18.16%}
+  .s3 .postcard{background-image:url("img/s3-postcard.webp");left:24.61%;top:73.44%;width:26.04%;height:23.24%}
+
+  .s3 .painel{position:absolute;left:58.6%;top:86.4%;width:40%;height:9.8%;border-radius:1.6cqw;
+    background:rgba(2,4,22,.94);box-shadow:0 0 3cqw rgba(2,4,22,.9);z-index:5}
+  .s3 .cta{position:absolute;left:66.41%;top:87.70%;width:27.67%;height:7.52%;display:flex;align-items:center;
+    justify-content:center;color:#fff;text-decoration:none;font-size:2.21cqw;font-weight:700;
+    background:linear-gradient(180deg,#1B4FD0,#0B2E86);border-radius:999px;
+    box-shadow:0 0 2cqw rgba(20,80,255,.45);transition:transform .15s ease;z-index:6}
+  .s3 .cta:hover{transform:translateY(-2px)}
+  .s3 .cta:focus-visible{outline:.25cqw solid #fff;outline-offset:.25cqw}
+  .s3 .fone{position:absolute;left:-15.4%;width:3.26cqw;height:3.26cqw;
+    filter:drop-shadow(0 0 .8cqw rgba(200,30,60,.6))}
+
+  .s3m{display:none}
+  @media (max-width:760px){
+    .s3{display:none}
+    .s3m{display:block;padding:26px 16px 28px;font-family:'Arimo',Arial,sans-serif;color:#fff;
+      background:
+        radial-gradient(ellipse 70% 25% at 60% 32%, rgba(20,70,190,.35), transparent 70%),
+        linear-gradient(180deg,#02030f 0%,#010010 55%,#02030f 100%)}
+    .s3m .tag{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;
+      border:1px solid rgba(60,130,255,.7);border-radius:10px;background:rgba(2,6,28,.75);
+      box-shadow:0 0 14px rgba(30,100,255,.4)}
+    .s3m .tag .casa{width:30px;height:30px;color:#2F7BFF;flex:none}
+    .s3m .tag small{display:block;font-size:11px;font-weight:700;line-height:1.2}
+    .s3m .tag b{display:block;font-size:18px;font-weight:700;line-height:1.2}
+    .s3m h2{font-size:clamp(46px,14vw,66px);font-weight:700;line-height:1.05;margin:14px 0 10px}
+    .s3m h2 .vm{color:#FF3131}
+    .s3m .sub{font-size:15px;font-weight:700;line-height:1.5}
+    .s3m .sub .vm{color:#E8383C}
+    .s3m .sub .az{color:#2166DB}
+    .s3m .dir{margin:16px -16px 18px;aspect-ratio:761/620;
+      background:url("img/s3-direita.webp") center top/cover no-repeat}
+    .s3m .bl{position:relative;margin-bottom:14px;padding:16px 14px 14px 62px;
+      background:linear-gradient(180deg,rgba(8,20,70,.55),rgba(1,3,20,.9));
+      border:1px solid rgba(60,130,255,.45);border-radius:12px;box-shadow:inset 0 0 18px rgba(30,100,255,.2)}
+    .s3m .bl .ico{position:absolute;left:14px;top:16px;width:36px;height:36px;color:#E8383C}
+    .s3m .bl span{display:block}
+    .s3m .bl h3{font-size:19px;font-weight:700;line-height:1.2}
+    .s3m .bl .vm{color:#E8383C;font-size:14px;font-weight:700;line-height:1.35;margin-top:4px}
+    .s3m .bl .cz{color:#C5C6D4;font-size:13px;line-height:1.4;margin-top:6px}
+    .s3m .bl .foto{display:block;margin:12px -6px 0 -48px;background-repeat:no-repeat;
+      background-size:contain;background-position:center}
+    .s3m .bl .placa{aspect-ratio:272/174;background-image:url("img/s3-placa.webp")}
+    .s3m .bl .van{aspect-ratio:460/186;background-image:url("img/s3-van.webp")}
+    .s3m .bl .postcard{aspect-ratio:400/238;background-image:url("img/s3-postcard.webp")}
+    .s3m .cta{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;
+      color:#fff;text-decoration:none;font-size:17px;font-weight:700;padding:16px 12px;margin-top:20px;
+      background:linear-gradient(180deg,#1B4FD0,#0B2E86);border-radius:999px;box-shadow:0 0 18px rgba(20,80,255,.45)}
+    .s3m .fone{width:26px;height:26px;flex:none}
+  }
+
   @media (prefers-reduced-motion:reduce){.hero .cta{transition:none}.hero .cta:hover{transform:none}}
 </style>
 </head>
@@ -418,6 +511,60 @@
 <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"/><path d="M3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"/><path d="M18 17v1a3 3 0 0 1-3 3h-3"/></svg><span>ATENDIMENTO<br>PERSONALIZADO</span></li>
   </ul>
   <a class="cat" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20ver%20o%20cat%C3%A1logo%20de%20kits." target="_blank" rel="noopener"><svg class="wa-o" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5 5 16a8.5 8.5 0 1 1 3 3z"/><path d="M9 8.5c0 3 2.5 6.5 6 6.5l1-1.5-2-1-1 .8c-1-.5-2-1.5-2.4-2.4l.8-1-1-2z" fill="currentColor" stroke="none"/></svg>VER CATÁLOGO NO WHATSAPP</a>
+</section>
+
+
+<!-- ================= SEÇÃO 3 — EXCLUSIVO PARA CONSTRUCTION ================= -->
+<section class="s3" aria-labelledby="s3-titulo">
+  <div class="dir" role="img" aria-label="Equipe de construção usando uniformes personalizados"></div>
+  <div class="tag"><svg class="ico casa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10.5V20h14v-9.5"/><path d="M10 13h4v3h-4z"/><path d="M14.5 17.5 17 21"/></svg><span><small>EXCLUSIVO PARA</small><b>CONSTRUCTION</b></span></div>
+  <h2 id="s3-titulo">VENDA <span class="vm">MAIS!</span></h2>
+  <p class="sub"><span>KITS EXCLUSIVOS QUE GERAM <b class="vm">VISUALIZAÇÕES</b></span><span>E MAIS CLIENTES PARA SUA <b class="az">CONSTRUÇÃO.</b></span></p>
+
+    <div class="bl b1">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3.5" width="18" height="11.5" rx="1"/><path d="M8.5 15 6.5 21M15.5 15l2 6M7.6 18.2h8.8"/></svg>
+      <div class="tx"><h3>YARD SIGN</h3><p class="vm"><span>QUEM APARECE MAIS,</span><span>VENDE MAIS.</span></p><p class="cz"><span>Seja visto. Seja lembrado.</span><span>Feche mais negócios.</span></p></div>
+      
+    </div>
+    <div class="bl b2">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7.5h9v8.5H5z"/><path d="M14 10.5h3.5L20 13.5v2.5h-6z"/><circle cx="8" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/><path d="M1.5 9.5h2.5M.5 12.5h3.5M2 15.5h2"/></svg>
+      <div class="tx"><h3>MAGNÉTICO VAN</h3><p class="vm"><span>+100 MIL</span><span>VISUALIZAÇÕES/DIA.</span></p><p class="cz"><span>Sua marca rodando e</span><span>trabalhando por você 24h.</span></p></div>
+      
+    </div>
+    <div class="bl b3">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+      <div class="tx"><h3>POST CARD - UPS</h3><p class="vm"><span>ENVIE PARA UM BAIRRO</span><span>E VENDA MAIS.</span></p><p class="cz"><span>Marketing direto que gera</span><span>resultados de verdade.</span></p></div>
+      
+    </div>
+  <div class="foto placa" role="img" aria-label="Placa de jardim personalizada"></div>
+  <div class="foto van" role="img" aria-label="Van com adesivo magnético personalizado"></div>
+  <div class="foto postcard" role="img" aria-label="Post card para envio pelos Correios"></div>
+  <div class="painel" aria-hidden="true"></div>
+  <a class="cta" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20kit%20exclusivo%20para%20empresa%20de%20constru%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg class="fone" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 2a14 14 0 0 0-12 21.3L2.6 30l6.9-1.4A14 14 0 1 0 16 2z" fill="#B3162F"/><path fill="#fff" d="M21.5 19.2c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a9 9 0 0 1-2.6-1.6 10 10 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.7l.6-.7c.2-.2.2-.4.3-.6a.6.6 0 0 0 0-.6c-.1-.2-.7-1.9-1-2.5-.3-.6-.6-.5-.8-.5h-.7a1.3 1.3 0 0 0-1 .5 4 4 0 0 0-1.2 2.9 7 7 0 0 0 1.5 3.7 15.8 15.8 0 0 0 6.1 5.3c2 .8 2.9.9 4 .7a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.2-.3-.3-.6-.4z"/></svg><span>QUERO MEU KIT AGORA</span></a>
+</section>
+
+<section class="s3m" aria-label="Exclusivo para Construction — venda mais">
+  <div class="tag"><svg class="ico casa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10.5V20h14v-9.5"/><path d="M10 13h4v3h-4z"/><path d="M14.5 17.5 17 21"/></svg><span><small>EXCLUSIVO PARA</small><b>CONSTRUCTION</b></span></div>
+  <h2>VENDA <span class="vm">MAIS!</span></h2>
+  <p class="sub"><span>KITS EXCLUSIVOS QUE GERAM <b class="vm">VISUALIZAÇÕES</b> E MAIS CLIENTES PARA SUA <b class="az">CONSTRUÇÃO.</b></span></p>
+  <div class="dir" role="img" aria-label="Equipe de construção usando uniformes personalizados"></div>
+
+    <div class="bl b1">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3.5" width="18" height="11.5" rx="1"/><path d="M8.5 15 6.5 21M15.5 15l2 6M7.6 18.2h8.8"/></svg>
+      <div class="tx"><h3>YARD SIGN</h3><p class="vm"><span>QUEM APARECE MAIS,</span><span>VENDE MAIS.</span></p><p class="cz"><span>Seja visto. Seja lembrado.</span><span>Feche mais negócios.</span></p></div>
+      <span class="foto placa" role="img" aria-label="YARD SIGN"></span>
+    </div>
+    <div class="bl b2">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7.5h9v8.5H5z"/><path d="M14 10.5h3.5L20 13.5v2.5h-6z"/><circle cx="8" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/><path d="M1.5 9.5h2.5M.5 12.5h3.5M2 15.5h2"/></svg>
+      <div class="tx"><h3>MAGNÉTICO VAN</h3><p class="vm"><span>+100 MIL</span><span>VISUALIZAÇÕES/DIA.</span></p><p class="cz"><span>Sua marca rodando e</span><span>trabalhando por você 24h.</span></p></div>
+      <span class="foto van" role="img" aria-label="MAGNÉTICO VAN"></span>
+    </div>
+    <div class="bl b3">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+      <div class="tx"><h3>POST CARD - UPS</h3><p class="vm"><span>ENVIE PARA UM BAIRRO</span><span>E VENDA MAIS.</span></p><p class="cz"><span>Marketing direto que gera</span><span>resultados de verdade.</span></p></div>
+      <span class="foto postcard" role="img" aria-label="POST CARD - UPS"></span>
+    </div>
+  <a class="cta" href="https://wa.me/19047490204?text=Ol%C3%A1%21%20Quero%20o%20kit%20exclusivo%20para%20empresa%20de%20constru%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg class="fone" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M16 2a14 14 0 0 0-12 21.3L2.6 30l6.9-1.4A14 14 0 1 0 16 2z" fill="#B3162F"/><path fill="#fff" d="M21.5 19.2c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a9 9 0 0 1-2.6-1.6 10 10 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.7l.6-.7c.2-.2.2-.4.3-.6a.6.6 0 0 0 0-.6c-.1-.2-.7-1.9-1-2.5-.3-.6-.6-.5-.8-.5h-.7a1.3 1.3 0 0 0-1 .5 4 4 0 0 0-1.2 2.9 7 7 0 0 0 1.5 3.7 15.8 15.8 0 0 0 6.1 5.3c2 .8 2.9.9 4 .7a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.2-.3-.3-.6-.4z"/></svg><span>QUERO MEU KIT AGORA</span></a>
 </section>
 
 <!-- próximas seções entram aqui -->
